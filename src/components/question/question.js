@@ -180,7 +180,7 @@ export default function CovidQuestion() {
 			)}
 		</div>
 		<div style={{marginTop:'4rem', width:"30rem", padding:'0 0 0 5rem',display:'inline-block'}}>
-		{showScore && load && (Math.floor(per)>37 ? <div style={{display:"flex",flexDirection:'column', padding:'1.2rem',border:'1px solid cyan' ,boxShadow:'0 0 7px red', borderRadius:'8px'}}><h3>Speak To Doctor For Further Consultation</h3><button onClick={()=>history.push('/drChat')}>Connect To Doctor => </button></div>: <p style={{fontSize:'1.7rem', fontWeight:"700", }}>YOU ARE SAFE & YOU DONT HAVE COVID &#128154;<br></br><br></br>
+		{showScore && load && (Math.floor(per)>37 ? <div style={{display:"flex",flexDirection:'column', padding:'1.2rem',border:'1px solid cyan' ,boxShadow:'0 0 7px red', borderRadius:'8px'}}><h3>Speak To Doctor For Further Consultation</h3><button onClick={()=>history.push('/drChat')}> Connect To Doctor </button></div>: <p style={{fontSize:'1.7rem', fontWeight:"700", }}>YOU ARE SAFE & YOU DONT HAVE COVID &#128154;<br></br><br></br>
 		<h5>But Follow the Below Prevention and Precautions Given <br></br><br></br>
 		1.Wash your hands frequently<br></br>
 		2.Maintain social distancing<br></br>
