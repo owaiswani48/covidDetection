@@ -101,116 +101,111 @@ const data = [
       latitude: '77.90846112500006',
     },
   },
-  {
-    name: 'rajbagh',
-    coordinates: {
-      langitude: '74.8287737',
-      latitude: '34.0662057',
-    },
-  },
-  {
+ {
     name: 'lalbazar',
     coordinates: {
-      langitude: '74.97681',
-      latitude: '34.1374 ',
+      langitude: '34.1374',
+      latitude: '74.97681',
     },
   },
   {
     name: 'hyderpora',
     coordinates: {
-      langitude: '74.7834355',
-      latitude: '34.0482573',
+      langitude: '34.0482573',
+      latitude: '74.7834355',
     },
   },
 {
     name: 'lalchowk',
     coordinates: {
-      langitude: '74.809036',
-      latitude: '34.069832',
+      langitude: '34.069832',
+      latitude: '74.809036',
     },
   },
 {
     name: 'soura',
     coordinates: {
-      langitude: '74.799533',
-      latitude: '34.1386249',
+      langitude: '34.1386249',
+      latitude: '74.799533',
     },
   },
   {
-    name: 'nowhata',
+    name: 'Nowhata',
     coordinates: {
-      langitude: '74.8258562',
-      latitude: '34.079427',
+      langitude: '34.079427',
+      latitude: '74.8258562',
     },
   },
 {
-    name: 'batwara',
+    name: 'Batwara',
     coordinates: {
-     langitude: '74.8521752',
-            latitude: '34.058261',
+     langitude: '34.058261',
+            latitude: '74.8521752',
     },
   },
 {
-    name: 'batmaloo',
+    name: 'Batmaloo',
     coordinates: {
-         latitude :'34.070411295499376',
-      langitude:'74.78869911677242',
+      langitude:'34.070411295499376',
+         latitude :'74.78869911677242',
+      
     },
   },
 {
-    name: 'jawahar nagar',
+    name: 'Jawahar nagar',
     coordinates: {
       
-     langitude: '74.8166982',
-    latitude: '34.057879',
+     langitude: '34.057879',
+    latitude: '74.8166982',
 
     },
   },
-  { name:'nishat',
+  { name:'Nishat',
     coordinates: {
      
-      langitude :'74.8801088',
-  latitude :'34.1286093',
+      langitude :'34.1286093',
+  latitude :'74.8801088',
     },
   },
 
 {
     name: 'sonwar',
     coordinates: {
-      langitude :'74.83410355097652',
-     latitude :'34.084316445153924',
+      langitude :'34.084316445153924',
+     latitude :'74.83410355097652',
     },
   },
 {
-    name: 'nawakadal',
+    name: 'Nawakadal',
     coordinates: {
-      langitude :'74.79642387873531',
-     latitude :'34.095802744761144',
+      langitude :'34.095802744761144',
+     latitude :'74.79642387873531',
     },
   },
 {
-    name: 'hazratbal',
+    name: 'Hazratbal',
     coordinates: {
-              langitude :'74.84654900080562 ',
-            latitude : '34.11572847600224',
+              langitude :'34.11572847600224',
+            latitude : '74.84654900080562',
      
     },
   },
 {
-    name: 'hawal',
+    name: 'Hawal',
     coordinates: {
-    langitude :'74.81122967249752',
-   latitude :'34.11004239246412',
+    langitude :'34.11004239246412',
+   latitude :'74.81122967249752',
 
     },
   },
 {
-    name: 'rajbagh',
+    name: 'Rajbagh',
     coordinates: {
-      langitude :'74.80989929682613',
-     latitude : '34.0826347965343',          
+      langitude :'32.3672831',
+     latitude : 75.537489,          
 },
   },
+
 
 
 
