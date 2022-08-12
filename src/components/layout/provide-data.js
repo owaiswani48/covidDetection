@@ -140,7 +140,7 @@ const {value , name} = e.target
 
                     </div>
                     <div className="submit-details__submit-sec">
-                        <button type="submit" className="submit-details__submit-btn" onClick={handleSubmitBtn}>Submit</button>
+                        <button type="submit" className="submit-details__submit-btn" onClick={handleSubmitBtn} style={{display:'flex',justifyContent:'center'}}>Submit</button>
                     </div>
                 </form>
                 {error ? <h1 className="toast">could not be submited try agin later  or call on 7780988972</h1> : null}
