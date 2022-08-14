@@ -77,7 +77,7 @@ const Dashboard = () => {
     <div className="app" style={{paddingTop:'9rem'}}>
       <div className="app__left">
         <div className="app__header">
-          <h1>COVID-19 Dashboard -Tracker</h1>
+          <h1>COVID Dashboard -Tracker</h1>
           <FormControl className="app__dropdown">
             <Select
               variant="outlined"
@@ -92,7 +92,7 @@ const Dashboard = () => {
           </FormControl>
           {/* <Footer/> */}
         </div>
-        <div className="app__stats">
+        <div className="app__stats" style={{textAlign:'start'}}>
           <InfoBox
             onClick={(e) => setCasesType("cases")}
             title="Coronavirus Cases"
@@ -110,7 +110,7 @@ const Dashboard = () => {
           />
           <InfoBox
             onClick={(e) => setCasesType("deaths")}
-            title="Deaths"
+            title="Number Of Deaths"
             isRed
             active={casesType === "deaths"}
             cases={prettyPrintStat(countryInfo.todayDeaths)}
@@ -120,7 +120,7 @@ const Dashboard = () => {
         <br/>
         <br/>
         <br/>
-        <h4>check the current cases on map</h4>
+        <h4>check the current hotspots on map</h4>
         <button onClick={()=>setMapShow(!mapShow)} style ={{justifyContent:'center'}}>{mapShow ? 'close Map': 'show MAP'} </button>
 {   mapShow &&   <Map
           countries={mapCountries}
@@ -135,7 +135,7 @@ const Dashboard = () => {
           <div className="app__information">
             <h3>Live Cases by Country</h3>
             <Table countries={tableData} />
-            <h3>Worldwide new {casesType}</h3>
+//             <h3>Worldwide new {casesType}</h3>
           </div>
         </CardContent>
       </Card>
