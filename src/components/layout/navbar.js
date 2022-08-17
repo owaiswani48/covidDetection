@@ -22,8 +22,8 @@ function Navbar() {
                 <Link to={"/map"}>
                     <li> Find Location</li>
                 </Link>
-                {<Link to={"/doctor"}>
-                    <li> Connect to Doctor</li>
+                {<Link to={`${user ? '/drChat':'/doctor'}`}>
+                    <li>{user ? 'Connect to Doctor':'covid detector'} </li>
                 </Link>}
             {user && <li><SignOut/></li> }
             </ul>
