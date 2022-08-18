@@ -26,7 +26,7 @@ function Navbar() {
                     <li> Resouce Location </li>
                 </Link>
                 {<Link to={`${user ? '/drChat':'/doctor'}`}>
-                    <li>{user ? 'Connect to Doctor':Covid Detector'} </li>
+                    <li>{user ? 'Connect to Doctor':'Covid Detector'} </li>
                 </Link>}
             {user && <li><SignOut/></li> }
             </ul>
