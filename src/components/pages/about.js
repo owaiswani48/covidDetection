@@ -7,7 +7,7 @@ function About() {
         <h1>Covid Tracking And Resources</h1>
         <h4>We are the Students of ISLAMIC UNIVERSITY OF SCIENCE AND TECHNOLOGY AWANTIPORA J&K</h4>
         <h4>We are currently.... </h4>
-        <p>Resize the browser window to see that this page is responsive by the way.</p>
+       <br/>
       </div>
       
       <h1>Our Team</h1>
@@ -18,7 +18,7 @@ function About() {
               <h2>Mohammad Arslaan</h2>
               <h2>Owais Bashir</h2>
               <p class="title">CEO & Founders</p>
-              <p>Have craeted the web application</p>
+              <p>Have created this web application</p>
               <p>arslaan007@gmail.com</p>
               <p>owaiswani48@gamil.com</p>
             </div>
@@ -31,7 +31,7 @@ function About() {
             <div class="container">
               <h2>Arslaan</h2>
               <p class="title">Developer</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>Some text that describes me.</p>
               <p>arslaan007@gmail.com</p>
               <p>Contact:821639869</p>
             </div>
@@ -44,7 +44,7 @@ function About() {
             <div class="container">
               <h2>Owais</h2>
               <p class="title">Developer</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>Some text that describes me.</p>
               <p>owaiswani48@gamil.com</p>
               <p>Contact:09709707</p>
             </div>
