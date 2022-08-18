@@ -120,8 +120,9 @@ const Dashboard = () => {
         <br/>
         <br/>
         <br/>
-        <h4>check the current hotspots on map</h4>
-        <button onClick={()=>setMapShow(!mapShow)} style ={{justifyContent:'center'}}>{mapShow ? 'close Map': 'show MAP'} </button>
+        <h4>Check the current hotspots on map</h4>
+        <br/>
+        <button onClick={()=>setMapShow(!mapShow)} style ={{justifyContent:'center'}}>{mapShow ? 'Close Map': 'Show Map'} </button>
 {   mapShow &&   <Map
           countries={mapCountries}
           casesType={casesType}
