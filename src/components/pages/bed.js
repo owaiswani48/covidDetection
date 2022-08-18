@@ -48,10 +48,10 @@ setFil(true)
         <div>
        { <form onSubmit={submit}>
 
-            <input placeholder='search by location name '  value ={sea} onChange={search}/>
+            <input placeholder='Search by Location Name '  value ={sea} onChange={search}/>
             <input type='submit' className='btn'/>
         </form>}
-        <button onClick={()=>setFil(!fil)}>clear filter</button>
+        <button onClick={()=>setFil(!fil)}>Clear filter</button>
         </div>
         {loading && <h1>loading.....</h1>}
             {bedFilter.length>0 ? 
