@@ -213,7 +213,7 @@ const data = [
 function Map({ countries, casesType, center, zoom }) {
   return (
     <div className="map">
-      <MapContainer  center={center} zoom={zoom}>
+      <MapContainer  center={[32.3672831,75.537489]} zoom={zoom}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 const option= [
     {id:1, name: 'bed'},
@@ -20,38 +20,51 @@ function ProvideData() {
         vrAt: "",
         msg: "",
     });
+    const [cords , setCords]= useState([])
+    useEffect(() => {
+        navigator.geolocation.getCurrentPosition( function(position) {
+          setCords([position.coords.longitude,position.coords.latitude])
+          },function(error) {
+            alert("Error Code = " + error.code + " - " + error.message)
+            console.error("Error Code = " + error.code + " - " + error.message);
+          })
+    },[])
+    
     const { name, contact, location, cat, msg } = data;
     const handleChange = (e) => {
         setData({ ...data, [e.target.name]: [e.target.value] })
-        console.log(id, data, "wdhus")
+        // console.log(id, data, "wdhus")
     }
     const handleSubmit = async (e) => {
+        let lat , long;
         e.preventDefault();
-        console.log("f", data);
-        console.log(name)
-        // const datas=[{
-        //     "Name": name.toString(),
-        //     "contact":contact.toString(),
-        //     "location":  location.toString(),
-        //     "catagories": cat.toString(),
-        //     "msg": msg.toString(),
-        //     "dos": new Date().toLocaleDateString(),
-        //     "visited": "FALSE"
-        // }]
+            //   navigator.geolocation.getCurrentPosition( function(position) {
+            //     console.log("Latitude is :", position.coords.latitude);
+            //     console.log("Longitude is :", position.coords.longitude);
+            //     lat =position.coords.latitude;
+            //     long=position.coords.longitude;
+            //   },function(error) {
+            //     alert("Error Code = " + error.code + " - " + error.message)
+            //     console.error("Error Code = " + error.code + " - " + error.message);
+            //   })
+        console.log(cords,'anderqwals')
         for(let i=0; i<=cheked.length; i++){
             console.log(cheked[i])
         const datas ={
             name:data.name.toString(),
-        time: data.time,
+        // time: data.time,
         contact:data.contact.toString(),
         location: data.location.toString().toLowerCase(),
         cat: cheked[i],
         vrAt:data.vrAt,
         msg: data.msg.toString(),
        dos: new Date().toLocaleDateString(),
-           visited: "FALSE"
+       coords:cords,
+           visited: "FALSE",
+
 
         }
+        console.log(datas, "ff data")
         axios.post('https://con-45207-default-rtdb.firebaseio.com/contactForm.json',datas)
             .then(response => {
                 console.log(response, "res");
@@ -71,7 +84,7 @@ function ProvideData() {
     }
     const check = (e)=> {
         const value = e.target.value
-    console.log(e.target.value,"dsh")
+    // console.log(e.target.value,"dsh")
     if(e.target.checked){
         let ar =[...cheked]
         ar.push(e.target.value)
@@ -82,7 +95,7 @@ function ProvideData() {
         setc(ab)
 
     }
-    console.log(cheked,"dsh")
+    // console.log(cheked,"dsh")
     }
 
 const onchange =(e)=>{

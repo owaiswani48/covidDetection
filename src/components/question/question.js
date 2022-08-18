@@ -130,7 +130,7 @@ export default function CovidQuestion() {
 		getPercent()
 	};
 	const getPercent=()=>{
-		const total = 1200;
+		const total = 1100;
 		const current = score
 		const percent=(current/total)*100
 		setPer(percent)

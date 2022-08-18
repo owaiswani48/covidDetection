@@ -7,20 +7,23 @@ import SignOut from '../componentschat/SignOut'
 function Navbar() {
     const [user] = useAuthState(auth)
     return (
-        <div className="navbar"  style={{zIndex:'999'}}>
+        <div className="navbar"  style={{zIndex:'999999'}}>
             <ul>
                 <Link to={"/"}>
                     <li> Resource</li>
                 </Link>
                 <Link to={"/DashboardCovid"}>
-                    <li>Home</li>
+                    <li>covid Detail</li>
                 </Link>
 
                 <Link to={"/about"}>
                     <li> About</li>
                 </Link>
                 <Link to={"/map"}>
-                    <li> Find Location</li>
+                    <li> hospital location </li>
+                </Link>
+                <Link to={"/resourceMap"}>
+                    <li> Resouce Location </li>
                 </Link>
                 {<Link to={`${user ? '/drChat':'/doctor'}`}>
                     <li>{user ? 'Connect to Doctor':'covid detector'} </li>

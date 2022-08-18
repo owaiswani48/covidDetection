@@ -16,10 +16,12 @@ import Chat from './components/componentschat/Chat'
 import CovidQuestion from './components/question/question';
 import SignIn from './components/componentschat/SignIn';
 import Dashboard from "./components/pages/dashboard";
+import ResourceLocation from "./components/pages/resourceLocation";
 // import Dashboard from './components/pages/dashboard';
 
 function App() {
   const [user] = useAuthState(auth)
+
   return (  
     <div className="App">
   <Navbar/>
@@ -35,6 +37,7 @@ function App() {
        <About/>
     </Route>
     <Route path={'/map'} component={MapPage}/>
+    <Route path={'/resourceMap'} component={ResourceLocation}/>
     <Route path={'/doctor'} component={CovidQuestion}/>
     <Route path={'/covidDetection'} component={CovidQuestion}/>
     <Route path={'/DashboardCovid'} component={Dashboard}/>
