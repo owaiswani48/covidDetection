@@ -10,23 +10,23 @@ function Navbar() {
         <div className="navbar"  style={{zIndex:'999999'}}>
             <ul>
                 <Link to={"/"}>
-                    <li> Resource</li>
+                    <li>Resource</li>
                 </Link>
                 <Link to={"/DashboardCovid"}>
-                    <li>covid Detail</li>
+                    <li>Covid Detail</li>
                 </Link>
 
                 <Link to={"/about"}>
                     <li> About</li>
                 </Link>
                 <Link to={"/map"}>
-                    <li> hospital location </li>
+                    <li>Hospital Location </li>
                 </Link>
                 <Link to={"/resourceMap"}>
                     <li> Resouce Location </li>
                 </Link>
                 {<Link to={`${user ? '/drChat':'/doctor'}`}>
-                    <li>{user ? 'Connect to Doctor':'covid detector'} </li>
+                    <li>{user ? 'Connect to Doctor':Covid Detector'} </li>
                 </Link>}
             {user && <li><SignOut/></li> }
             </ul>
