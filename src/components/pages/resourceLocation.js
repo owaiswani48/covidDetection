@@ -5,11 +5,13 @@ const position = [51.505, -0.09]
 const redOptions = { color: 'green' }
 function ResourceLocation({center}) {
     const [data, setdata]=useState([])
+    const [loading, setLoading]= useState(false)
     useEffect(()=>{
+      setLoading(true)
       console.log('a')
         axios.get('https://con-45207-default-rtdb.firebaseio.com/contactForm.json')
         .then((response) => {
-            
+            setLoading(false)
             const data= response.data
             // console.log(data.data,'data')
               let arr =[]
@@ -31,7 +33,7 @@ function ResourceLocation({center}) {
           setdata(getLocArr)
         })
         .finally(() => {
-            // setLoading(false);
+            setLoading(false);
         });
 
     },[])
@@ -40,7 +42,7 @@ function ResourceLocation({center}) {
         <h1>Resouce Location Finder </h1>
         <h4>Find the location of your resource</h4>
         <div className="map">
-        <MapContainer center={[34.1180416,74.8191744]} zoom={8} scrollWheelZoom={false}>
+       {loading ? <h1>LOADING MAP CONTENT & RESOURCE Location DATA</h1> :<MapContainer center={[34.1180416,74.8191744]} zoom={8} scrollWheelZoom={false}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -48,7 +50,7 @@ function ResourceLocation({center}) {
           {data.map((i)=>(<CircleMarker center={i.coords.reverse()} pathOptions={redOptions} radius={20}>
             <Popup>{i?.name}</Popup>
           </CircleMarker>))}
-  </MapContainer>
+  </MapContainer>}
     </div>
     </div>
   )

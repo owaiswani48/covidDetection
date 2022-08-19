@@ -157,10 +157,9 @@ button svg {
 }
 
 .sendMsg {
-  position: fixed;
+
   display: flex;
   width: 100%;
-  bottom: 0;
   z-index: 1;
   border-top: 1px solid lightgray;
   margin-left: -5px;
@@ -170,8 +169,11 @@ button svg {
 }
 
 .msgs {
-  margin:0 0 110px 0;
+  margin:0 0 10px 0;
   display: flex;
+  padding-top: 78px;
+  height: 43rem;
+  overflow: auto  ;
   flex-direction: column;
 }
 .Prevention{

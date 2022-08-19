@@ -24,10 +24,11 @@ function Chat() {
                             <img src={photoURL} alt=""  style={{border:'2px solid black',
                             width:'3rem', heigth:'3rem ', borderRadius:'50%'
                             }}/>
-                            <p>{text}</p>
+                            <p style={{wordBreak:'break-all'}}>{text}</p>
                         </div>
                     </div>
                 )))}
+                {!loading && (messages.length<1 &&  "NO MESSAGES | SEND MESSAGE TO DR and THEY WILL GET BACK TO YOU ASAP")}
             </div>
             <SendMessage scroll={scroll} />
             <div ref={scroll}></div>
