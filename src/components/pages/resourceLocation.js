@@ -19,11 +19,13 @@ function ResourceLocation({center}) {
             let cordsFil=[]
           let filterd = arr.filter((i)=>i.coords)
           filterd.forEach((i)=>{ cordsFil.push({coords:i.coords,
-                                              name:i.name}) 
-                                            console.log(i.coords,'l')
+                                              name:i.name,
+                                              cat:i.cat
+                                            }) 
+                                            
                                             })
-         let getLocArr=cordsFil.filter((i)=>typeof(i.coords)!=='string')
-         cordsFil=[]
+         let getLocArr=cordsFil.filter((i)=>typeof(i.coords)!=='string' && i.cat!==undefined)
+         console.log(cordsFil)
         //  getLocArr.forEach((i)=>{
         //   cordsFil.pish
         //  })
@@ -46,7 +48,7 @@ function ResourceLocation({center}) {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
           {data.map((i)=>(<CircleMarker center={i.coords.reverse()} pathOptions={redOptions} radius={20}>
-            <Popup>{i?.name}</Popup>
+            <Popup>{i?.name} resources:- {i.cat ==undefined ? "all resource":i.cat}--</Popup>
           </CircleMarker>))}
   </MapContainer>
     </div>

@@ -60,7 +60,7 @@ function ProvideData() {
         vrAt:data.vrAt,
         msg: data.msg.toString(),
        dos: new Date().toLocaleDateString(),
-       coords:cords,
+       coords:cords? cords :"no location",
            visited: "FALSE",
 
 
