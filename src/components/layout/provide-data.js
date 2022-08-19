@@ -26,7 +26,7 @@ function ProvideData() {
           setCords([position.coords.longitude,position.coords.latitude])
           console.log(position.coords.longitude,position.coords.latitude,"pos")
           },function(error) {
-            alert("Error Code = " + error.code + " - " + error.message)
+            alert("KINDLY TURN ON LOCTAION  Error Code = " + error.code + " - " + error.message)
             console.error("Error Code = " + error.code + " - " + error.message);
           })
     },[])
