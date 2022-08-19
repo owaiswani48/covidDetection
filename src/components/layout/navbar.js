@@ -13,7 +13,7 @@ function Navbar() {
                     <li>Resource</li>
                 </Link>
                 <Link to={"/DashboardCovid"}>
-                    <li>covid Detail</li>
+                    <li>Covid Detail</li>
                 </Link>
 
                 <Link to={"/about"}>
