@@ -155,7 +155,7 @@ export default function CovidQuestion() {
 				<div className='score-section'>
 					{!load ? `Covid Score ${score-23}`: ''} 
 					<br/>
-					{!load ?<p style={{fontWeight:'600', textShadow:'0 0 5px red'}}><br/>"Loading Your Covid Percent. We are Calculating your Level Of Covid Risk..."</p> :
+					{!load ?<p style={{fontWeight:'600', textShadow:'0 0 5px red'}}><br/>Loading Your Covid Risk Percent. We are Calculating your Level Of Covid Risk Result...</p> :
 				    per.toFixed(2)+"% Is the percent of your Covid Risk Please Connect With Doctor"}
 				</div>
 
@@ -180,15 +180,21 @@ export default function CovidQuestion() {
 			)}
 		</div>
 		<div style={{marginTop:'4rem', width:"30rem", padding:'0 0 0 5rem',display:'inline-block'}}>
-		{showScore && load && (Math.floor(per)>37 ? <div style={{display:"flex",flexDirection:'column', padding:'1.2rem',border:'1px solid cyan' ,boxShadow:'0 0 7px red', borderRadius:'8px'}}><h3>Speak To Doctor For Further Consultation</h3><button onClick={()=>history.push('/drChat')} style={{display:'flex',justifyContent:'center'}}> Connect To Doctor </button></div>: <p style={{fontSize:'1.7rem', fontWeight:"700", }}>YOU ARE SAFE & YOU DONT HAVE COVID &#128154;<br></br><br></br>
-		<h5>But Follow the Below Prevention and Precautions Given <br></br><br></br>
-		1.Wash your hands frequently<br></br>
-		2.Maintain social distancing<br></br>
-		3.Avoid touching eyes, nose and mouth<br></br>
-		4.Practice respiratory hygiene<br></br>
-		5.If you have fever, cough and difficulty in breathing, seek medical care early<br></br>
+		{showScore && load && (Math.floor(per)>37 ? <div style={{display:"flex",flexDirection:'column', padding:'1.2rem',border:'1px solid cyan' ,boxShadow:'0 0 7px red', borderRadius:'8px'}}><h3>Speak To Doctor For Further Consultation</h3><button onClick={()=>history.push('/drChat')} style={{display:'flex',justifyContent:'center'}}> Connect To Doctor  </button> </div>: <p style={{fontSize:'1.7rem', fontWeight:"700", }}><h3 style={{color:'green',fontWeight:'600'}}>YOU ARE SAFE & YOU DONT HAVE COVID &#128154;</h3>
+		<br/> <br/>
+		<div className='Prevention'>
+		<p>Be aware or Educate yourself with the latest updates on the following website :
+			 <a href="https://www.who.int/health-topics/coronavirus" target="">WHO</a> </p>
+			 <br/>
+			 <h3 style={{textDecoration:'underline'}}>Prevention & Precautions</h3><br/>
+		<p>Follow the Below Prevention and Precautions Given <br/><br/>
+		1.Wash your hands frequently<br/>
+		2.Maintain social distancing<br/>
+		3.Avoid touching eyes, nose and mouth<br/>
+		4.Practice respiratory hygiene<br/>
+		5.If you have fever, cough and difficulty in breathing, seek medical care early<br/>
 		6.Use a mask/face-cloth
-		</h5></p>)}
+		</p></div></p>)}
 		
 		</div>
 

@@ -16,7 +16,7 @@ function MapPage() {
 
 
         <div style={{padding:'0.5rem', }}>
-            <Map location={location} zoomLevel={18}/>
+            <Map location={location} zoomLevel={13}/>
         </div>
     </div>
     </div>

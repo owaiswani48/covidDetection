@@ -24,6 +24,7 @@ function ProvideData() {
     useEffect(() => {
         navigator.geolocation.getCurrentPosition( function(position) {
           setCords([position.coords.longitude,position.coords.latitude])
+          console.log(position.coords.longitude,position.coords.latitude,"pos")
           },function(error) {
             alert("Error Code = " + error.code + " - " + error.message)
             console.error("Error Code = " + error.code + " - " + error.message);
@@ -106,7 +107,7 @@ const {value , name} = e.target
         <div className="submit-details">
             <div className="submit-details__title">
                 <span className="submit-details__heading"> You Can Also Help</span><br />
-                <span className="submit-details__desc">By Providing Any Details of Bed,Oxygen, medicine or plasma In The Form  and our backend team will verify it  and the people in need can later use the resource.  </span>
+                <span className="submit-details__desc">By Providing Any Details of Bed,Oxygen, Medicine or Plasma In The Form  and our backend team will verify it  and the people in need can later use the resource.  </span>
             </div>
             <div className="submit-details__form">
                 <form className="submit-details__form-sec" onSubmit={handleSubmit} >
@@ -147,7 +148,7 @@ const {value , name} = e.target
                     </div>
 
                     <div className="submit-details__row">
-                    <span className="submit-details__label">message</span>
+                    <span className="submit-details__label">Message</span>
                         <textarea className="submit-details__input-field" placeholder="Enter Additional Information Here In this Text Area" id="textAreaForm" name="msg" rows="10" cols="50" value={msg} onChange={handleChange}>          
                     </textarea>
 

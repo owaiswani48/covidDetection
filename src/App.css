@@ -174,4 +174,13 @@ button svg {
   display: flex;
   flex-direction: column;
 }
-
+.Prevention{
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-radius: 15px;
+  border: 2px solid;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f7f8f5;
+  box-shadow: 0 5px 20px 0 rgb(128 128 128 / 30%);
+}
