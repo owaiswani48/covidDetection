@@ -27,7 +27,9 @@ const Map = ({ location, zoomLevel }) => (
           lng={location.lng}
           text={location.address}
         />
-        <LocationPin
+
+        
+            <LocationPin
           lat={34.03961941016442}
           lng={74.80951775121798}
           text={'Florence Hospital Chanpora, Srinagar'}

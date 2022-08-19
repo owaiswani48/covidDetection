@@ -10,10 +10,10 @@ function Navbar() {
         <div className="navbar"  style={{zIndex:'999999'}}>
             <ul>
                 <Link to={"/"}>
-                    <li> Resource</li>
+                    <li>Resource</li>
                 </Link>
                 <Link to={"/DashboardCovid"}>
-                    <li>Covid Details</li>
+                    <li>covid Detail</li>
                 </Link>
 
                 <Link to={"/about"}>
