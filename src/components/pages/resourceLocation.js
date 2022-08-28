@@ -41,11 +41,12 @@ function ResourceLocation({center}) {
     },[])
   return (
     <div style={{paddingTop:'8rem'}}>
+    
         <h1>Resouce Location Finder </h1>
         <h4>Find the location of your resource</h4>
-        <p>dark green color means all the resource are available</p>
-        <p>mid green color means few of the resource are available</p>
-        <p>light  green color means single  resource is available</p>
+        <p style={{width:'fit-content' , margin:'1rem auto', border:'1px solid grey'}}><div style={{width:'1.3rem', height:'1.3rem', borderRadius:'50%', background:'#095D29'}}></div> dark green color means all the resource are available</p>
+        <p style={{width:'fit-content' , margin:'1rem auto', border:'1px solid grey'}}><div style={{width:'1.3rem', height:'1.3rem', borderRadius:'50%', background:'#0E8B3E'}}></div>mid green color means few of the resource are available</p>
+        <p style={{width:'fit-content' , margin:'1rem auto', border:'1px solid grey'}}><div style={{width:'1.3rem', height:'1.3rem', borderRadius:'50%', background:'#36A661'}}></div>light  green color means single  resource is available</p>
         <div className="map">
        {loading ? <h1>LOADING MAP CONTENT & RESOURCE Location DATA</h1> :<MapContainer center={[34.1180416,74.8191744]} zoom={8} scrollWheelZoom={false}>
     <TileLayer
@@ -53,7 +54,7 @@ function ResourceLocation({center}) {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
           {data.map((i)=>(<CircleMarker center={i.coords.reverse()} pathOptions={redOptions} radius={20}>
-            <Popup>{i?.name} resources:- {i.cat ==undefined ? "all resource":i.cat}--</Popup>
+            <Popup>{i?.name} resources:- {i.cat ===undefined ? "all resource":i.cat}--</Popup>
           </CircleMarker>))}
   </MapContainer>}
     </div>
