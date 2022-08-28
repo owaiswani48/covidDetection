@@ -43,6 +43,9 @@ function ResourceLocation({center}) {
     <div style={{paddingTop:'8rem'}}>
         <h1>Resouce Location Finder </h1>
         <h4>Find the location of your resource</h4>
+        <p>dark green color means all the resource are available</p>
+        <p>mid green color means few of the resource are available</p>
+        <p>light  green color means single  resource is available</p>
         <div className="map">
        {loading ? <h1>LOADING MAP CONTENT & RESOURCE Location DATA</h1> :<MapContainer center={[34.1180416,74.8191744]} zoom={8} scrollWheelZoom={false}>
     <TileLayer

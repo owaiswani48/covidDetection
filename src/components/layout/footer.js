@@ -15,11 +15,13 @@ function Footer() {
             cName="cly-footer__link"
             
             label="Term &amp; Conditions"
+            link="/about"
           />
           <SimpleLink
             cName="cly-footer__link"
             
             label="Security Policy"
+            link="/about"
           />
           
         </div>
