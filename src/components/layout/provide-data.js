@@ -111,7 +111,7 @@ const {value , name} = e.target
             </div>
             <div className="submit-details__form">
                 <div style={{width:'100%', padding:'0.7rem'}}> 
-                    <h4> please allow allocation on browser so that the location of resource can be located at realtime on Map </h4>
+                    <h4> please allow <span style={{color:"white", background:'red', padding:"0.6rem"}}> Location </span>on browser so that the location of resource can be located at realtime on Map </h4>
                 </div>
                 <form className="submit-details__form-sec" onSubmit={handleSubmit} >
                     <div className="submit-details__row">
