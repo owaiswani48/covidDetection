@@ -110,6 +110,9 @@ const {value , name} = e.target
                 <span className="submit-details__desc">By Providing Any Details of Bed,Oxygen, Medicine or Plasma In The Form  and our backend team will verify it  and the people in need can later use the resource.  </span>
             </div>
             <div className="submit-details__form">
+                <div style={{width:'100%', padding:'0.7rem'}}> 
+                    <h4> please allow allocation on browser so that the location of resource can be located at realtime on Map </h4>
+                </div>
                 <form className="submit-details__form-sec" onSubmit={handleSubmit} >
                     <div className="submit-details__row">
                         <div className="submit-details__input-sec">
