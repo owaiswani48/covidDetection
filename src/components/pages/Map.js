@@ -1,7 +1,7 @@
 import { Marker } from "leaflet";
-import React from "react";
+import React, { useEffect } from "react";
 import { CircleMarker, MapContainer, Popup, TileLayer } from "react-leaflet";
-
+import axios from 'axios'
 
 
 import "./Map.css";
@@ -101,13 +101,13 @@ const data = [
       latitude: '77.90846112500006',
     },
   },
- {
-    name: 'lalbazar',
-    coordinates: {
-      langitude: '34.1374',
-      latitude: '74.97681',
-    },
-  },
+//  {
+//     name: 'lalbazar',
+//     coordinates: {
+//       langitude: '34.1374',
+//       latitude: '74.97681',
+//     },
+//   },
   {
     name: 'hyderpora',
     coordinates: {
@@ -207,10 +207,30 @@ const data = [
   },
 
 
-
-
 ];
 function Map({ countries, casesType, center, zoom }) {
+  useEffect(()=>{
+
+    axios.get('https://con-45207-default-rtdb.firebaseio.com/location.json')
+    .then((response) => {
+      console.log(response.data)
+     let ab = Object.values(response.data)
+      ab.forEach(element => {
+        data.push({
+          name: 'hotspot',
+          coordinates: {
+            langitude :element.langitude,
+           latitude : element.latitude,          
+      },
+        })
+        console.log('dta',data)
+      })
+    })
+    .catch((e)=>console.log(e))
+    .finally(() => {
+    });
+    },[])
+    
   return (
     <div className="map">
       <MapContainer  center={[32.3672831,75.537489]} zoom={zoom}>
@@ -219,7 +239,7 @@ function Map({ countries, casesType, center, zoom }) {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
           {data.map((i)=>(<CircleMarker center={[i?.coordinates?.langitude,i?.coordinates?.latitude]} pathOptions={redOptions} radius={20}>
-            <Popup>{i?.name}</Popup>
+            <Popup>{i?.name} {i.coordinates.name==='hotspot'&& console.log("found")}</Popup>
           </CircleMarker>))}
       
       </MapContainer>
