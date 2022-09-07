@@ -48,7 +48,7 @@ function ResourceLocation({center}) {
         <p style={{width:'fit-content' , margin:'1rem auto', border:'1px solid grey'}}><div style={{width:'1.3rem', height:'1.3rem', borderRadius:'50%', background:'#0E8B3E'}}></div>mid green color means few of the resource are available</p>
         <p style={{width:'fit-content' , margin:'1rem auto', border:'1px solid grey'}}><div style={{width:'1.3rem', height:'1.3rem', borderRadius:'50%', background:'#36A661'}}></div>light  green color means single  resource is available</p>
         <div className="map">
-       {loading ? <h1>LOADING MAP CONTENT & RESOURCE Location DATA</h1> :<MapContainer center={[34.1180416,74.8191744]} zoom={8} scrollWheelZoom={false}>
+       {loading ? <h1>LOADING MAP CONTENT & RESOURCE Location DATA</h1> :<MapContainer center={[34.1180416,74.8191744]} zoom={8} scrollWheelZoom={true}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
