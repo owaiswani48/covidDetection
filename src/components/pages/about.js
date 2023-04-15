@@ -1,58 +1,38 @@
-import React from 'react'
+import React from 'react';
+
+import './AboutUs.css';
 
 function About() {
-    return (
-        <div className="about">
-                    <div class="about-section">
-        <h1>Covid Tracking And Resources</h1>
-        <h4>We are the Students of ISLAMIC UNIVERSITY OF SCIENCE AND TECHNOLOGY AWANTIPORA J&K</h4>
-        <h4>We are currently.... </h4>
-       <br/>
+  return (
+    <div className="about-us-container">
+      <div className="about-us-header">
+        <h1>About Us</h1>
       </div>
-      
-      <h1>Our Team</h1>
-      <div class="row">
-        <div class="column">
-          <div class="card">
-            <div class="container">
-              <h2>Mohammad Arslaan</h2>
-              <h2>Owais Bashir</h2>
-              <p class="title">CEO & Founders</p>
-              <p>Have created this web application</p>
-              <p>arslaan007@gmail.com</p>
-              <p>owaiswani48@gamil.com</p>
-            </div>
+      <div className="about-us-content">
+        <div className="about-us-profile">
+          <div className="about-us-profile-image">
+            <img src="https://media.licdn.com/dms/image/C4E03AQEJEUtd_xjjEQ/profile-displayphoto-shrink_800_800/0/1606014595785?e=1686787200&v=beta&t=TwITBTnF04pltu0I7pKjMmw2X0FQY7iNEbPfVgXKVPw" alt="Syed Mehdi Razzvi" />
           </div>
-        </div>
-      
-        <div class="column">
-          <div class="card">
-            <img src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046" alt="Arslaan" style={{width:'100px'}} />
-            <div class="container">
-              <h2>Arslaan</h2>
-              <p class="title">Developer</p>
-              <p>Some text that describes me.</p>
-              <p>arslaan007@gmail.com</p>
-              <p>Contact:821639869</p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="column">
-          <div class="card">
-            <img src="https://media.istockphoto.com/vectors/user-avatar-profile-icon-black-vector-illustration-vector-id1209654046" alt="Owais" style={{width:'100px'}} />
-            <div class="container">
-              <h2>Owais</h2>
-              <p class="title">Developer</p>
-              <p>Some text that describes me.</p>
-              <p>owaiswani48@gamil.com</p>
-              <p>Contact:09709707</p>
+          <div className="about-us-profile-details">
+            <h2>Syed Mehdi Razzvi</h2>
+            <h3>Full Stack Developer</h3>
+            <p>I am a Full Stack Developer with over 5 years of experience in building web applications. My areas of expertise include React, Node.js, and MongoDB.</p>
+            <div className="about-us-profile-skills">
+              <h4>Skills</h4>
+              <ul>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-        </div>
-    )
+    </div>
+  );
 }
 
-export default About
+export default About;
